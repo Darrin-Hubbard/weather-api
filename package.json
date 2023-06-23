@@ -41,6 +41,7 @@
   },
   "scripts": {
     "test": "APP_ENVIROMENT=test ./node_modules/.bin/nyc ./node_modules/.bin/mocha --exit",
+    "start": "DEBUG=app nodemon --exec babel-node index.js",
     "dev": "npm run lint && DEBUG=app nodemon --exec babel-node index.js",
     "build": "rm -rf dist && npm run lint && ./node_modules/.bin/babel . --out-dir dist --ignore node_modules && cp .env dist",
     "serve": "node dist/index.js",
@@ -78,7 +79,8 @@
     "babel 7",
     "nodemon",
     "integration tests",
-    "joi validation"
+    "joi validation",
+    "weather"
   ],
   "author": "Vibhas Bhingarde <vibhas.fl@gmail.com>",
   "license": "MIT"
